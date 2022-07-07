@@ -1,0 +1,7 @@
+{
+  "name": "Digimons",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
