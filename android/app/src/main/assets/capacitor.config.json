@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Digimons",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

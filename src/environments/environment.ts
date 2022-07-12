@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: '15e6769716924dedf12b05de98346700',
+  baseUrl: 'https://digimon-api.vercel.app/api/digimon',
+  images: 'https://digimon.shadowsmith.com/img/'
 };
 
 /*

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Digimons</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="information-circle-outline" id="open-modal" expand="block"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor='let item of digimons' [routerLink]="['/detalles/' + item.name]">
+      <ion-avatar slot="start">
+        <img src="{{item.img}}" alt="">
+      </ion-avatar>
+      <br>
+      <ion-label>{{item.name}}</ion-label>
+     </ion-item>
+  </ion-list>
+
+  <!--Modal Informacion Personal-->
+  <ion-modal #modal trigger="open-modal" [presentingElement]="presentingElement">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Informacion Personal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+       <div class="centralizar">
+        <p>Informacion Personal</p>
+       <div class="img-personal">
+        <img src="../assets/img/foto2x2.jpg" alt="" >
+       </div>
+        <ion-list>
+         <ion-item>
+           Annethy Javier
+         </ion-item>
+         <ion-item>
+          2020-10518
+         </ion-item>
+         <ion-item>
+          809-436-1300
+         </ion-item>
+         <ion-item>
+           annethy25@gmail.com
+         </ion-item>
+        </ion-list>
+       </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
